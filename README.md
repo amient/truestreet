@@ -4,41 +4,11 @@ as a timeseries data store. Truestreet leverages Google Cloud Spanner database
 to store timeseries data, resulting in a fast and scalable monitoring system.
 
 ## Building
-Truestreet uses bazel to build binaries.
 
-[Install bazel](https://docs.bazel.build/versions/master/install-ubuntu.html)
-
-Install go dependency tool.
-
-```shell
-sudo apt-get install go-dep
 ```
-Compile truestreet.
-
-```shell
-mkdir -p github.com/google
-cd github.com/google
-
-git clone https://github.com/google/truestreet.git
-cd truestreet
-
-dep ensure
-find vendor/github.com/grpc-ecosystem/grpc-gateway -name BUILD.bazel -delete
-
-bazel run //:gazelle
-
-bazel build //...
-
-bazel test //...
+make image
 ```
-Bazel saves compiled binary inside bazel-bin directory.
 
-To build a container image and push it to Google Cloud Repository update
-cloud project-id in BUILD.bazel and execute following command.
-
-```shell
-bazel run //:push
-```
 ### Google Cloud Spanner setup
 
 If you have not already, set up the

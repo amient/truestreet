@@ -59,16 +59,16 @@ go_image(
 )
 
 container_image(
-    name="truestreet_image",
-    base=":truestreet_image_base",
-    ports=["5678"],
-    )
+    name = "truestreet_image",
+    base = ":truestreet_image_base",
+    ports = ["5678"],
+)
 
 container_push(
-    name="push",
-    format="Docker",
-    image=":truestreet_image",
-    registry="gcr.io",
-    repository="<project-id>/truestreet",
+    name = "push",
+    format = "Docker",
+    image = ":truestreet_image",
+    registry = "gcr.io",
+    repository = "<project-id>/truestreet",
     tag = "latest",
-    )
+)

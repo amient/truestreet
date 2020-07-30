@@ -21,6 +21,7 @@ import (
 	"errors"
 	"flag"
 	"fmt"
+	"github.com/google/truestreet/database"
 	"io/ioutil"
 	"log"
 	"net/http"
@@ -33,7 +34,6 @@ import (
 	"github.com/prometheus/prometheus/prompb"
 	"github.com/golang/protobuf/proto"
 	"github.com/golang/snappy"
-	"github.com/google/truestreet/database"
 )
 
 // Command line flags and database.
