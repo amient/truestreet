@@ -1,5 +1,4 @@
 .idea/
 *.iml
-Dockerfile
 truestreet.amd64
 truestreet
