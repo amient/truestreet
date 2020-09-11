@@ -6,7 +6,7 @@ to store timeseries data, resulting in a fast and scalable monitoring system.
 ## Building
 
 ```
-docker build -t <your-org>/truestreet:<version>> ./
+docker build -t <your-org>/truestreet-amd64:<version> ./
 ```
 
 ### Google Cloud Spanner setup
