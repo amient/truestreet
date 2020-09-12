@@ -187,7 +187,7 @@ func (d *database) updateIndexLabels(ctx context.Context, indexRows []*indexRow,
 		}
 		if err := d.applyMutations(ctx, mutations[start:end], d.metrics.SpannerDuration["timeseries"]); err != nil {
 			// applyMutations already records the error in its prometheus metric so we only need to log.
-			log.Printf("applyMutations error for samples : %v", err)
+			log.Printf("updateIndexLabels error for samples : %v", err)
 		}
 	}
 	return nil
